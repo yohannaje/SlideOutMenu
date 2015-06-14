@@ -33,8 +33,33 @@ class BackTableVC: UIViewController {
         var DestVC = segue.destinationViewController as! ViewController
         
         var indexPath :NSIndexPath = self.tableView.indexPathForSelectedRow()!
+        let destinationVarView: ViewController.ViewTypes
+        switch indexPath.row {
+        case 0:
+            destinationVarView = .LandscapesViewType
+        case 1:
+            destinationVarView = .PeopleViewType
+        case 2:
+            destinationVarView = .CityViewType
+        case 3:
+            destinationVarView = .LoveViewType
+        case 4:
+            destinationVarView = .NatureViewType
+        case 5:
+            destinationVarView = .BWViewType
+        case 6:
+            destinationVarView = .ArchitectureViewType
+        case 7:
+            destinationVarView = .DesignViewType
+        case 8:
+            destinationVarView = .ArtViewType
+        case 9:
+            destinationVarView = .MiscViewType
+        default:
+            destinationVarView = .MiscViewType
+        }
         
-        DestVC.varView = indexPath.row
+        DestVC.varView = destinationVarView
         
     }
 }

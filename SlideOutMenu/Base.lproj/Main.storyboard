@@ -153,7 +153,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJs-I8-OHG">
-                                <rect key="frame" x="65" y="151" width="42" height="21"/>
+                                <rect key="frame" x="65" y="151" width="271" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -193,7 +193,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FpO-Ij-FRk">
-                                <rect key="frame" x="83" y="143" width="42" height="21"/>
+                                <rect key="frame" x="83" y="143" width="218" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -204,7 +204,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Heart" id="yri-hz-2zL"/>
                     <navigationItem key="navigationItem" title="Hearted" id="P37-SR-cyt">
-                        <barButtonItem key="leftBarButtonItem" image="60275107-4A82-4A53-90F2-4AEFB2542B59" id="MkN-U1-WMu"/>
+                        <barButtonItem key="leftBarButtonItem" image="E9DD5D4B-2F94-4962-8BED-8F2C56F9866A" id="MkN-U1-WMu"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -243,7 +243,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="60275107-4A82-4A53-90F2-4AEFB2542B59" width="25" height="25">
+        <image name="E9DD5D4B-2F94-4962-8BED-8F2C56F9866A" width="25" height="25">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
