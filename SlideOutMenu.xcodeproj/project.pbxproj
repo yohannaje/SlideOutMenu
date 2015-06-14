@@ -13,6 +13,8 @@
 		B0F490581B2D563900C22970 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0F490571B2D563900C22970 /* Images.xcassets */; };
 		B0F4905B1B2D563900C22970 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0F490591B2D563900C22970 /* LaunchScreen.xib */; };
 		B0F490671B2D563900C22970 /* SlideOutMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F490661B2D563900C22970 /* SlideOutMenuTests.swift */; };
+		B0F490731B2D572900C22970 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F490721B2D572900C22970 /* SWRevealViewController.m */; };
+		B0F490A91B2D71B200C22970 /* BackTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F490A81B2D71B200C22970 /* BackTableVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,10 @@
 		B0F490601B2D563900C22970 /* SlideOutMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlideOutMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F490651B2D563900C22970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0F490661B2D563900C22970 /* SlideOutMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOutMenuTests.swift; sourceTree = "<group>"; };
+		B0F490701B2D572800C22970 /* SlideOutMenu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SlideOutMenu-Bridging-Header.h"; sourceTree = "<group>"; };
+		B0F490711B2D572900C22970 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		B0F490721B2D572900C22970 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		B0F490A81B2D71B200C22970 /* BackTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackTableVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,7 @@
 				B0F490501B2D563900C22970 /* AppDelegate.swift */,
 				B0F490521B2D563900C22970 /* ViewController.swift */,
 				B0F490541B2D563900C22970 /* Main.storyboard */,
+				B0F490A81B2D71B200C22970 /* BackTableVC.swift */,
 				B0F490571B2D563900C22970 /* Images.xcassets */,
 				B0F490591B2D563900C22970 /* LaunchScreen.xib */,
 				B0F4904E1B2D563900C22970 /* Supporting Files */,
@@ -90,7 +97,10 @@
 		B0F4904E1B2D563900C22970 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B0F490711B2D572900C22970 /* SWRevealViewController.h */,
+				B0F490721B2D572900C22970 /* SWRevealViewController.m */,
 				B0F4904F1B2D563900C22970 /* Info.plist */,
+				B0F490701B2D572800C22970 /* SlideOutMenu-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -214,6 +224,8 @@
 			files = (
 				B0F490531B2D563900C22970 /* ViewController.swift in Sources */,
 				B0F490511B2D563900C22970 /* AppDelegate.swift in Sources */,
+				B0F490A91B2D71B200C22970 /* BackTableVC.swift in Sources */,
+				B0F490731B2D572900C22970 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,9 +352,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SlideOutMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SlideOutMenu/SlideOutMenu-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -350,9 +365,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SlideOutMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SlideOutMenu/SlideOutMenu-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -409,6 +426,7 @@
 				B0F4906C1B2D563900C22970 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0F4906D1B2D563900C22970 /* Build configuration list for PBXNativeTarget "SlideOutMenuTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +435,7 @@
 				B0F4906F1B2D563900C22970 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
