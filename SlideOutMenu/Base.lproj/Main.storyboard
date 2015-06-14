@@ -67,8 +67,8 @@
                                         <color key="tintColor" red="0.96862745100000003" green="0.1764705882" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
-                                            <segue destination="u4k-NU-Bgv" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSeguePushController" id="VTV-qg-V6z"/>
-                                            <segue destination="jOW-fH-mij" kind="custom" identifier="sw_right" trigger="accessoryAction" customClass="SWRevealViewControllerSeguePushController" id="dRa-fq-n08"/>
+                                            <segue destination="u4k-NU-Bgv" kind="custom" identifier="sw_right" customClass="SWRevealViewControllerSeguePushController" id="VTV-qg-V6z"/>
+                                            <segue destination="jOW-fH-mij" kind="custom" identifier="sw_front" trigger="accessoryAction" customClass="SWRevealViewControllerSeguePushController" id="dRa-fq-n08"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -152,8 +152,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="n7Y-vo-s2O">
+                                <rect key="frame" x="26" y="56" width="317" height="490"/>
+                                <color key="backgroundColor" red="1" green="0.91155216781738935" blue="0.88727736776505239" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="43d-oi-Iep">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="fav" id="B0B-nI-3xp">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJs-I8-OHG">
-                                <rect key="frame" x="65" y="151" width="271" height="21"/>
+                                <rect key="frame" x="165" y="20" width="271" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -162,7 +183,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.94901960780000005" green="0.27058823529999998" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="world-h" id="shc-5c-S3k"/>
+                    <tabBarItem key="tabBarItem" title="" image="world-h" id="yYo-F1-xDd"/>
                     <navigationItem key="navigationItem" title="Explore" id="FSC-y0-BXd">
                         <barButtonItem key="leftBarButtonItem" image="Menu" id="l4E-Qg-B8E">
                             <color key="tintColor" red="0.94901960780000005" green="0.27058823529999998" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
@@ -177,7 +198,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RDo-KR-ga2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1004.5" y="2299.5"/>
+            <point key="canvasLocation" x="1576.5" y="1525.5"/>
         </scene>
         <!--Hearted-->
         <scene sceneID="hFk-0g-Wet">
@@ -204,7 +225,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Heart" id="yri-hz-2zL"/>
                     <navigationItem key="navigationItem" title="Hearted" id="P37-SR-cyt">
-                        <barButtonItem key="leftBarButtonItem" image="E9DD5D4B-2F94-4962-8BED-8F2C56F9866A" id="MkN-U1-WMu"/>
+                        <barButtonItem key="leftBarButtonItem" image="FEC8BCB4-06B6-470E-BF70-A825A56F1140" id="MkN-U1-WMu"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -214,7 +235,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1004.5" y="1526.5"/>
+            <point key="canvasLocation" x="1576.5" y="698.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="T8e-RQ-FWJ">
@@ -239,11 +260,11 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZnV-tr-5v9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.5" y="2211.5"/>
+            <point key="canvasLocation" x="674.5" y="1421.5"/>
         </scene>
     </scenes>
     <resources>
-        <image name="E9DD5D4B-2F94-4962-8BED-8F2C56F9866A" width="25" height="25">
+        <image name="FEC8BCB4-06B6-470E-BF70-A825A56F1140" width="25" height="25">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
