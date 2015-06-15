@@ -9,37 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
-   
-    enum ViewTypes: Int {
-        case LandscapesViewType = 0
-        case PeopleViewType = 1
-        case CityViewType = 2
-        case LoveViewType = 3
-        case NatureViewType = 4
-        case BWViewType = 5
-        case ArchitectureViewType = 6
-        case DesignViewType = 7
-        case ArtViewType = 8
-        case MiscViewType = 9
-        
-    }
     
     @IBOutlet weak var Open: UIBarButtonItem!
    
     @IBOutlet weak var Label: UILabel!
     
-    var varView: ViewTypes = .MiscViewType
+    var varView: ItemType = .MiscViewType
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        Open.target = self.revealViewController()
-        Open.action = Selector("revealToggle:")
-        
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        
+    func categoryChangeNotificationReceived(notification: NSNotification) {
+        varView = SharedAppState.selectedCategory
+        setTitle()
+    }
+    
+    func setTitle() {
         switch varView {
+        case .AllTypes:
+            Label.text = "All"
         case .BWViewType:
             Label.text = "BW"
         case .LandscapesViewType:
@@ -61,6 +46,22 @@ class ViewController: UIViewController {
         case .ArtViewType:
             Label.text = "Art"
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: Selector("categoryChangeNotificationReceived:"),
+                name: "SelectedCategoryChange",
+                object: nil)
+        
+        Open.target = self.revealViewController()
+        Open.action = Selector("revealToggle:")
+        
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        setTitle()
        
     }
 

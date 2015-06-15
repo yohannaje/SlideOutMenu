@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		358ACDA21B2F89F000516538 /* CollectionItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358ACDA11B2F89F000516538 /* CollectionItemViewController.swift */; };
+		358ACDA41B2F985D00516538 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358ACDA31B2F985D00516538 /* AppState.swift */; };
 		B0F490511B2D563900C22970 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F490501B2D563900C22970 /* AppDelegate.swift */; };
 		B0F490531B2D563900C22970 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F490521B2D563900C22970 /* ViewController.swift */; };
 		B0F490561B2D563900C22970 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0F490541B2D563900C22970 /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		358ACDA11B2F89F000516538 /* CollectionItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionItemViewController.swift; sourceTree = "<group>"; };
+		358ACDA31B2F985D00516538 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		B0F4904B1B2D563900C22970 /* SlideOutMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideOutMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F4904F1B2D563900C22970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0F490501B2D563900C22970 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 				B0F490571B2D563900C22970 /* Images.xcassets */,
 				B0F490591B2D563900C22970 /* LaunchScreen.xib */,
 				B0F4904E1B2D563900C22970 /* Supporting Files */,
+				358ACDA11B2F89F000516538 /* CollectionItemViewController.swift */,
+				358ACDA31B2F985D00516538 /* AppState.swift */,
 			);
 			path = SlideOutMenu;
 			sourceTree = "<group>";
@@ -225,7 +231,9 @@
 				B0F490531B2D563900C22970 /* ViewController.swift in Sources */,
 				B0F490511B2D563900C22970 /* AppDelegate.swift in Sources */,
 				B0F490A91B2D71B200C22970 /* BackTableVC.swift in Sources */,
+				358ACDA41B2F985D00516538 /* AppState.swift in Sources */,
 				B0F490731B2D572900C22970 /* SWRevealViewController.m in Sources */,
+				358ACDA21B2F89F000516538 /* CollectionItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
