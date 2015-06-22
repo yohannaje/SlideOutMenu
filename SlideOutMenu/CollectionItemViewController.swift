@@ -27,10 +27,10 @@ class BasicItem: Item {
 }
 
 class ItemCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var label: UILabel!
+    //@IBOutlet weak var favButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     func setItem(item: BasicItem) {
-        label.text = item.title
+        //label.text = item.title
         imageView.image = item.image
     }
 }
@@ -60,6 +60,8 @@ class CollectionItemViewController: UIViewController {
         navigationItem.title = SharedAppState.selectedTab.title
         Label.text =  SharedAppState.selectedCategory.title
         exploreButton.selected = true
+        
+        
 
     }
     
@@ -119,8 +121,15 @@ extension CollectionItemViewController: UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let item = displayedItems[indexPath.item]
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CellIdentifier", forIndexPath: indexPath) as! ItemCollectionViewCell
-        cell.setItem(item)
-        return cell
+        if (SharedAppState.selectedTab.hashValue == 0){
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("exploreCell", forIndexPath: indexPath) as! ItemCollectionViewCell
+            cell.setItem(item)
+            return cell
+        }else{
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("favsCell", forIndexPath: indexPath) as! ItemCollectionViewCell
+            cell.setItem(item)
+            return cell
+        }
+        
     }
 }
