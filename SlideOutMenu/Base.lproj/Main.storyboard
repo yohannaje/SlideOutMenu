@@ -1,15 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TAM-ha-rxJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gOi-QC-yOP">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
+        <!--PageVC-->
+        <scene sceneID="hlE-Od-fpZ">
+            <objects>
+                <viewController id="gOi-QC-yOP" customClass="PageVC" customModule="SlideOutMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6es-ev-Gy4"/>
+                        <viewControllerLayoutGuide type="bottom" id="HEt-0q-fdN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hoq-KW-KL1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hnl-KG-MhL">
+                                <rect key="frame" x="172" y="603" width="31" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Skip">
+                                    <color key="titleColor" red="0.1526379112" green="0.20566698850000001" blue="0.29105508209999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="89z-pB-WUC" kind="show" id="ZJE-Ue-HD1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99326966179999998" green="0.98777122100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KPk-0a-nx6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-356.5" y="1430.5"/>
+        </scene>
         <!--Login Screens-->
         <scene sceneID="gPt-GG-XYf">
             <objects>
-                <viewController id="TAM-ha-rxJ" customClass="LoginScreens" customModule="SlideOutMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginScreens" id="TAM-ha-rxJ" customClass="LoginScreens" customModule="SlideOutMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YQb-o0-Mt1"/>
                         <viewControllerLayoutGuide type="bottom" id="AFu-lB-Del"/>
@@ -18,44 +50,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tumblr" translatesAutoresizingMaskIntoConstraints="NO" id="Ln6-JT-O2N">
-                                <rect key="frame" x="60" y="139" width="255" height="220"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ln6-JT-O2N">
+                                <rect key="frame" x="59" y="83" width="255" height="180"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lHh-CY-fTD">
-                                <rect key="frame" x="85" y="337" width="204" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="85" y="307" width="204" height="30"/>
+                                <color key="textColor" red="0.17268890240000001" green="0.2326840442" blue="0.32928898359999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="SaveMail:" destination="TAM-ha-rxJ" eventType="editingDidEnd" id="1Pc-Dt-pwZ"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Feb-b5-bMN">
-                                <rect key="frame" x="85" y="388" width="204" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="85" y="353" width="204" height="30"/>
+                                <color key="textColor" red="0.1526379112" green="0.20566698850000001" blue="0.29105508209999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="SavePasswd:" destination="TAM-ha-rxJ" eventType="editingDidEnd" id="k3r-f1-MvK"/>
+                                </connections>
                             </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiY-Ym-aDS">
+                                <rect key="frame" x="59" y="28" width="255" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" red="0.1526379112" green="0.20566698850000001" blue="0.29105508209999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZY-g1-kTv">
-                                <rect key="frame" x="139" y="469" width="97" height="30"/>
+                                <rect key="frame" x="138" y="419" width="97" height="30"/>
                                 <color key="backgroundColor" red="0.27057215379999999" green="0.3334301489" blue="0.41605508209999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" red="0.99326966183037624" green="0.98777122096891401" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="89z-pB-WUC" kind="show" id="6n8-xU-sNC"/>
-                                </connections>
                             </button>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="LTO-Bt-Zeg">
-                                <rect key="frame" x="168" y="610" width="39" height="37"/>
-                            </pageControl>
                         </subviews>
-                        <color key="backgroundColor" red="0.17268890236005027" green="0.23268404421205902" blue="0.32928898358585856" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.99326966179999998" green="0.98777122100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="tumblrLog" destination="hZY-g1-kTv" id="xLW-AH-2My"/>
+                        <outlet property="imageView" destination="Ln6-JT-O2N" id="3ud-sF-qo5"/>
+                        <outlet property="titleLabel" destination="eiY-Ym-aDS" id="z6i-fR-3cv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rHp-1t-k3o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-318.5" y="1430.5"/>
+            <point key="canvasLocation" x="-62.5" y="674.5"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="Eyw-J4-FDr">
@@ -194,10 +236,10 @@
                         <viewControllerLayoutGuide type="bottom" id="dyg-Oz-Wyf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ftc-8m-dIf">
-                        <rect key="frame" x="1" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJs-I8-OHG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJs-I8-OHG">
                                 <rect key="frame" x="16" y="8" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.22389340639999999" green="0.3177496883" blue="0.52249053030000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -337,7 +379,7 @@
                         <viewControllerLayoutGuide type="bottom" id="HtT-yM-dQ3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bkg-6w-gne">
-                        <rect key="frame" x="1" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XWV-YE-XGV">
@@ -395,18 +437,27 @@
             </objects>
             <point key="canvasLocation" x="1046.5" y="1870.5"/>
         </scene>
+        <!--Page View Controller-->
+        <scene sceneID="Xyx-kk-lPB">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="xsS-kZ-4Jy" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I4t-PL-8fd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-480.5" y="674.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Menu" width="27" height="27"/>
         <image name="heart-full" width="25" height="25"/>
         <image name="heart-h" width="25" height="25"/>
         <image name="heart-s" width="25" height="25"/>
-        <image name="tumblr" width="710" height="185"/>
         <image name="world-h" width="25" height="25"/>
         <image name="world-s" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FU0-cg-7mc"/>
+        <segue reference="Qqy-0e-M8Q"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.94901960780000005" green="0.27058823529999998" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
 </document>
