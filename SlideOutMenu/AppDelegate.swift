@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         pageController.pageIndicatorTintColor = UIColor.lightGrayColor()
         pageController.currentPageIndicatorTintColor = UIColor.blackColor()
         
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        
+        
         return true
         
         

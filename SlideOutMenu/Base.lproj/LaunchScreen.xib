@@ -18,7 +18,11 @@
                 </label>
             </subviews>
             <color key="backgroundColor" red="0.22389340639999999" green="0.3177496883" blue="0.52249053030000003" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="tintColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
             <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <point key="canvasLocation" x="547.5" y="454.5"/>
         </view>
