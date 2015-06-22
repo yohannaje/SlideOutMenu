@@ -2,7 +2,7 @@
 //  AppState.swift
 //  SlideOutMenu
 //
-//  Created by Nicolas Ameghino on 6/15/15.
+//  Created by Yoh on 6/15/15.
 //  Copyright (c) 2015 Harmony Bunny. All rights reserved.
 //
 
@@ -26,7 +26,16 @@ enum ItemType: Int {
             switch self {
             case .AllTypes: return "All"
             case .PeopleViewType: return "People"
-            default: return "TooLazyException"
+            case .CityViewType: return "City"
+            case .LoveViewType: return "Love"
+            case .NatureViewType: return "Nature"
+            case .BWViewType: return "B & W"
+            case .ArchitectureViewType: return "Architecture"
+            case .DesignViewType: return "Design"
+            case .ArtViewType: return "Art"
+            case .LandscapesViewType: return "Landscapes"
+            case .MiscViewType: return "Misc"
+                
             }
         }
     }
@@ -38,12 +47,27 @@ enum ItemType: Int {
     }
 }
 
+enum Tabs: Int {
+    case ExploreTab = 0
+    case FavoritesTab = 1
+    
+    var title: String{
+        get {
+            switch self{
+            case .ExploreTab: return "Explore"
+            case .FavoritesTab: return "Hearted"
+            }
+        }
+    }
+}
+
 class AppState {
     var selectedCategory: ItemType = .AllTypes {
         didSet {
             NSNotificationCenter.defaultCenter().postNotificationName("SelectedCategoryChange", object: self)
         }
     }
+    var selectedTab: Tabs = .ExploreTab
     var selectedMediaTypes: [Int] = []
 }
 

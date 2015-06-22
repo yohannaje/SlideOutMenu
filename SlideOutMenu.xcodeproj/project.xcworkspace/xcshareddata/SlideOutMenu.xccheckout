@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D50CFBB1-6C79-4A97-B7AC-E07A45A21708</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SlideOutMenu</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F8B3FCF8F995011AF6132C7F35113DF7A38BA69C</key>
+		<string>https://github.com/yohannaje/SlideOutMenu.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SlideOutMenu.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F8B3FCF8F995011AF6132C7F35113DF7A38BA69C</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/yohannaje/SlideOutMenu.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F8B3FCF8F995011AF6132C7F35113DF7A38BA69C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F8B3FCF8F995011AF6132C7F35113DF7A38BA69C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SlideOutMenu</string>
+		</dict>
+	</array>
+</dict>
+</plist>

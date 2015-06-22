@@ -10,11 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var Open: UIBarButtonItem!
+    @IBOutlet weak var open: UIBarButtonItem!
    
-    @IBOutlet weak var Label: UILabel!
+    @IBOutlet weak var catLabel: UILabel!
     
-    var varView: ItemType = .MiscViewType
+    var varView: ItemType = .AllTypes
     
     func categoryChangeNotificationReceived(notification: NSNotification) {
         varView = SharedAppState.selectedCategory
@@ -24,27 +24,27 @@ class ViewController: UIViewController {
     func setTitle() {
         switch varView {
         case .AllTypes:
-            Label.text = "All"
+            catLabel.text = "All"
         case .BWViewType:
-            Label.text = "BW"
+            catLabel.text = "BW"
         case .LandscapesViewType:
-            Label.text = "Landscapes"
+            catLabel.text = "Landscapes"
         case .ArchitectureViewType:
-            Label.text = "Architecture"
+            catLabel.text = "Architecture"
         case .CityViewType:
-            Label.text = "City"
+            catLabel.text = "City"
         case .DesignViewType:
-            Label.text = "Design"
+            catLabel.text = "Design"
         case .LoveViewType:
-            Label.text = "Love"
+            catLabel.text = "Love"
         case .NatureViewType:
-            Label.text = "Nature"
+            catLabel.text = "Nature"
         case .MiscViewType:
-            Label.text = "Misc"
+            catLabel.text = "Misc"
         case .PeopleViewType:
-            Label.text = "People"
+            catLabel.text = "People"
         case .ArtViewType:
-            Label.text = "Art"
+            catLabel.text = "Art"
         }
     }
     
@@ -57,8 +57,8 @@ class ViewController: UIViewController {
                 name: "SelectedCategoryChange",
                 object: nil)
         
-        Open.target = self.revealViewController()
-        Open.action = Selector("revealToggle:")
+        open.target = self.revealViewController()
+        open.action = Selector("revealToggle:")
         
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         setTitle()

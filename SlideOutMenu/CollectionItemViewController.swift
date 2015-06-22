@@ -2,15 +2,21 @@
 //  CollectionItemViewController.swift
 //  SlideOutMenu
 //
-//  Created by Nicolas Ameghino on 6/15/15.
+//  Created by Yoh on 6/15/15.
 //  Copyright (c) 2015 Harmony Bunny. All rights reserved.
 //
 
 import UIKit
 
-class Item {
+protocol Item {
+    var category: ItemType { get }
+    var title: String { get }
+}
+
+
+class BasicItem: Item {
     let category: ItemType
-    let title: String!
+    let title: String
     let image: UIImage!
     
     init(title: String, image: UIImage, category: ItemType) {
@@ -23,7 +29,7 @@ class Item {
 class ItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var imageView: UIImageView!
-    func setItem(item: Item) {
+    func setItem(item: BasicItem) {
         label.text = item.title
         imageView.image = item.image
     }
@@ -34,8 +40,11 @@ class CollectionItemViewController: UIViewController {
     @IBOutlet weak var openMenuButton: UIBarButtonItem!
     @IBOutlet weak var Label: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
-    var items = [Item]()
-    var displayedItems = [Item]()
+    @IBOutlet weak var exploreButton: UIButton!
+    @IBOutlet weak var favoritesButton: UIButton!
+    
+    var items = [BasicItem]()
+    var displayedItems = [BasicItem]()
     var varView: ItemType = .AllTypes
     
     override func viewDidLoad() {
@@ -48,8 +57,34 @@ class CollectionItemViewController: UIViewController {
             selector: Selector("categoryChangeNotificationReceived:"),
             name: "SelectedCategoryChange",
             object: nil)
-        
+        navigationItem.title = SharedAppState.selectedTab.title
+        Label.text =  SharedAppState.selectedCategory.title
+        exploreButton.selected = true
 
+    }
+    
+    @IBAction func FavoriteHandlr(sender: UIButton) {
+        navigationItem.title = "Hearted"
+       
+        favoritesButton.selected = true
+        exploreButton.selected = false
+    }
+    @IBAction func ExploreHandlr(sender: UIButton) {
+        navigationItem.title = "Explore"
+        exploreButton.selected = true
+        favoritesButton.selected = false
+    }
+    
+    func tabButtonHandler(button: UIButton) {
+        switch button {
+        case favoritesButton:
+            SharedAppState.selectedTab = .FavoritesTab
+        case exploreButton:
+            SharedAppState.selectedTab = .ExploreTab
+        default:
+            break
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

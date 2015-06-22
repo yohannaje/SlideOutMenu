@@ -13,6 +13,10 @@ import Foundation
 class BackTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet var tableView: UITableView!
     
+    @IBOutlet weak var photoSwitch: UISwitch!
+    @IBOutlet weak var musicSwitch: UISwitch!
+    @IBOutlet weak var textSwitch: UISwitch!
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ItemType.MaxRawValue
     }
