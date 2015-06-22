@@ -19,13 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var pageController = UIPageControl.appearance()
         pageController.pageIndicatorTintColor = UIColor.lightGrayColor()
         pageController.currentPageIndicatorTintColor = UIColor.blackColor()
-        
-        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
-        
-        
         return true
-        
-        
     }
 
     func applicationWillResignActive(application: UIApplication) {
