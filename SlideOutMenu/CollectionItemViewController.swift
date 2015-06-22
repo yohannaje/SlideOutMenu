@@ -63,7 +63,9 @@ class CollectionItemViewController: UIViewController {
         Label.text =  SharedAppState.selectedCategory.title
         exploreButton.selected = true
 
-
+        //View controllers inside navigation doesn't use the "preferredStatusBarStyle" instead the
+        //app queries the navigation controller, so we need to edit it
+        self.navigationController!.navigationBar.barStyle = UIBarStyle.Black;
     }
     
     @IBAction func FavoriteHandlr(sender: UIButton) {
@@ -112,7 +114,6 @@ class CollectionItemViewController: UIViewController {
     func setTitle() {
         Label.text = varView.title
     }
-
 }
 
 extension CollectionItemViewController: UICollectionViewDataSource {

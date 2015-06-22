@@ -37,4 +37,8 @@ class LoginScreens: UIViewController{
 //        let passwd = tumblrpass.text
 //    }
     
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.Default;
+    }
+    
 }
