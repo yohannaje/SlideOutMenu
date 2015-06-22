@@ -27,10 +27,10 @@ class BasicItem: Item {
 }
 
 class ItemCollectionViewCell: UICollectionViewCell {
-    //@IBOutlet weak var favButton: UIButton!
+    
     @IBOutlet weak var imageView: UIImageView!
+    
     func setItem(item: BasicItem) {
-        //label.text = item.title
         imageView.image = item.image
     }
 }
@@ -47,6 +47,8 @@ class CollectionItemViewController: UIViewController {
     var displayedItems = [BasicItem]()
     var varView: ItemType = .AllTypes
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
@@ -60,8 +62,7 @@ class CollectionItemViewController: UIViewController {
         navigationItem.title = SharedAppState.selectedTab.title
         Label.text =  SharedAppState.selectedCategory.title
         exploreButton.selected = true
-        
-        
+
 
     }
     
