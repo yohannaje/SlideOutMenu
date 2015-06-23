@@ -26,16 +26,25 @@ class BasicItem: Item {
     }
 }
 
-class ItemCollectionViewCell: UICollectionViewCell {
+class ShotCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
     
-    func setItem(item: BasicItem) {
-        imageView.image = item.image
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        //imageView.layer.borderColor = UIColor(white: 0.2, alpha: 1.0).CGColor
+        imageView.layer.borderWidth = 2
+        
     }
+    
+//    func setItem(item: BasicItem) {
+//        imageView.image = item.image
+//    }
 }
 
-class CollectionItemViewController: UIViewController {
+class CollectionItemViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var openMenuButton: UIBarButtonItem!
     @IBOutlet weak var Label: UILabel!
@@ -43,15 +52,20 @@ class CollectionItemViewController: UIViewController {
     @IBOutlet weak var exploreButton: UIButton!
     @IBOutlet weak var favoritesButton: UIButton!
     
+    @IBOutlet var layout: UICollectionViewFlowLayout!
+    
     var items = [BasicItem]()
     var displayedItems = [BasicItem]()
     var varView: ItemType = .AllTypes
     
+    var shots: [Shots]!
+    var cellHeight: CGFloat = 125
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
+        collectionView.delegate = self
         
         openMenuButton.target = self.revealViewController()
         openMenuButton.action = Selector("revealToggle:")
@@ -62,10 +76,27 @@ class CollectionItemViewController: UIViewController {
         navigationItem.title = SharedAppState.selectedTab.title
         Label.text =  SharedAppState.selectedCategory.title
         exploreButton.selected = true
+        
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        
+        let cellWidth = self.view.frame.width/2
+        layout.itemSize = CGSizeMake(cellWidth, cellHeight)
+        
+        shots = [Shots]()
+        let api = DribbbleApi()
+        
+        api.loadShots({ self.didLoadShots($0) })
 
         //View controllers inside navigation doesn't use the "preferredStatusBarStyle" instead the
         //app queries the navigation controller, so we need to edit it
         self.navigationController!.navigationBar.barStyle = UIBarStyle.Black;
+    }
+    
+    func didLoadShots(shots: [Shots]){
+        self.shots = shots
+        collectionView.reloadData()
+        
     }
     
     @IBAction func FavoriteHandlr(sender: UIButton) {
@@ -97,6 +128,8 @@ class CollectionItemViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // CREO QUE ES POR ESTO
+    
     func categoryChangeNotificationReceived(notification: NSNotification) {
         varView = SharedAppState.selectedCategory
         if varView == .AllTypes {
@@ -118,20 +151,15 @@ class CollectionItemViewController: UIViewController {
 
 extension CollectionItemViewController: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return displayedItems.count
+        return shots.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let item = displayedItems[indexPath.item]
-        if (SharedAppState.selectedTab.hashValue == 0){
-            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("exploreCell", forIndexPath: indexPath) as! ItemCollectionViewCell
-            cell.setItem(item)
-            return cell
-        }else{
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("favsCell", forIndexPath: indexPath) as! ItemCollectionViewCell
-            cell.setItem(item)
+        let item = shots[indexPath.item]
+       
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ShotCell", forIndexPath: indexPath) as! ShotCell
+            
             return cell
         }
         
-    }
 }

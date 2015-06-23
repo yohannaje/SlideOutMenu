@@ -245,54 +245,6 @@
                                 <color key="textColor" red="0.22389340639999999" green="0.3177496883" blue="0.52249053030000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="n7Y-vo-s2O">
-                                <rect key="frame" x="0.0" y="36" width="375" height="518"/>
-                                <color key="backgroundColor" red="0.94436553029090908" green="0.94436553029090908" blue="0.94436553029090908" alpha="1" colorSpace="calibratedRGB"/>
-                                <collectionViewLayout key="collectionViewLayout" id="jYd-fs-vSw"/>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" reuseIdentifier="favsCell" id="ZDt-Hb-H5K" customClass="ItemCollectionViewCell" customModule="SlideOutMenu" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a16-Xw-Nc5">
-                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="126"/>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <size key="customSize" width="100" height="100"/>
-                                        <connections>
-                                            <outlet property="imageView" destination="a16-Xw-Nc5" id="FT5-Ps-sKJ"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="center" reuseIdentifier="exploreCell" id="B0B-nI-3xp" customClass="ItemCollectionViewCell" customModule="SlideOutMenu" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nuu-oX-s63">
-                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="126"/>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <size key="customSize" width="100" height="100"/>
-                                        <connections>
-                                            <outlet property="imageView" destination="Nuu-oX-s63" id="Ogg-aG-B7h"/>
-                                            <segue destination="vyg-61-uVN" kind="show" id="ds2-x0-5vV"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="u4k-NU-Bgv" id="pSR-az-5AR"/>
-                                    <outlet property="delegate" destination="u4k-NU-Bgv" id="8jh-2s-XTc"/>
-                                </connections>
-                            </collectionView>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bqc-AK-Nka">
                                 <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                                 <subviews>
@@ -335,6 +287,36 @@
                                     <constraint firstItem="qLz-B7-EID" firstAttribute="height" secondItem="Fvv-9s-y7O" secondAttribute="height" id="pkX-Ye-7jD"/>
                                 </constraints>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="n7Y-vo-s2O">
+                                <rect key="frame" x="0.0" y="63" width="375" height="555"/>
+                                <color key="backgroundColor" red="0.94436553029090908" green="0.94436553029090908" blue="0.94436553029090908" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewLayout key="collectionViewLayout" id="PWJ-v7-Pap" customClass="UICollectionViewFlowLayout"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="center" reuseIdentifier="ShotCell" id="B0B-nI-3xp" customClass="ShotCell" customModule="SlideOutMenu" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="126"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nuu-oX-s63">
+                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="126"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <size key="customSize" width="125" height="126"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="Nuu-oX-s63" id="xwe-Xa-KTS"/>
+                                            <segue destination="vyg-61-uVN" kind="show" id="ds2-x0-5vV"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="PWJ-v7-Pap" id="HHD-mZ-gKL"/>
+                                    <outlet property="delegate" destination="PWJ-v7-Pap" id="CAk-Lw-By2"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.94436553030000003" green="0.94436553030000003" blue="0.94436553030000003" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.94901960780000005" green="0.27058823529999998" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
@@ -363,6 +345,7 @@
                         <outlet property="collectionView" destination="n7Y-vo-s2O" id="e4I-0K-yXe"/>
                         <outlet property="exploreButton" destination="qLz-B7-EID" id="omS-EX-WJu"/>
                         <outlet property="favoritesButton" destination="Fvv-9s-y7O" id="N7u-Nu-buB"/>
+                        <outlet property="layout" destination="PWJ-v7-Pap" id="XUZ-bN-k3m"/>
                         <outlet property="openMenuButton" destination="l4E-Qg-B8E" id="rEA-Io-2E4"/>
                     </connections>
                 </viewController>

@@ -11,6 +11,8 @@
 		358ACDA41B2F985D00516538 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358ACDA31B2F985D00516538 /* AppState.swift */; };
 		B05CA5811B385AA4008536D9 /* LoginScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05CA5801B385AA4008536D9 /* LoginScreens.swift */; };
 		B05CA5851B387839008536D9 /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05CA5841B387839008536D9 /* PageVC.swift */; };
+		B05CA5871B38BC95008536D9 /* DribbbleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05CA5861B38BC95008536D9 /* DribbbleApi.swift */; };
+		B05CA5891B38BCA4008536D9 /* Shots.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05CA5881B38BCA4008536D9 /* Shots.swift */; };
 		B0F490511B2D563900C22970 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F490501B2D563900C22970 /* AppDelegate.swift */; };
 		B0F490531B2D563900C22970 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F490521B2D563900C22970 /* ViewController.swift */; };
 		B0F490561B2D563900C22970 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0F490541B2D563900C22970 /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 		358ACDA31B2F985D00516538 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		B05CA5801B385AA4008536D9 /* LoginScreens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreens.swift; sourceTree = "<group>"; };
 		B05CA5841B387839008536D9 /* PageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
+		B05CA5861B38BC95008536D9 /* DribbbleApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleApi.swift; sourceTree = "<group>"; };
+		B05CA5881B38BCA4008536D9 /* Shots.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shots.swift; sourceTree = "<group>"; };
 		B0F4904B1B2D563900C22970 /* SlideOutMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideOutMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F4904F1B2D563900C22970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0F490501B2D563900C22970 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +74,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B05CA58A1B38BCAB008536D9 /* DribbbleApi */ = {
+			isa = PBXGroup;
+			children = (
+				B05CA5881B38BCA4008536D9 /* Shots.swift */,
+				B05CA5861B38BC95008536D9 /* DribbbleApi.swift */,
+			);
+			name = DribbbleApi;
+			sourceTree = "<group>";
+		};
 		B0F490421B2D563900C22970 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +104,7 @@
 		B0F4904D1B2D563900C22970 /* SlideOutMenu */ = {
 			isa = PBXGroup;
 			children = (
+				B05CA58A1B38BCAB008536D9 /* DribbbleApi */,
 				B0F490501B2D563900C22970 /* AppDelegate.swift */,
 				358ACDA31B2F985D00516538 /* AppState.swift */,
 				B0F490A81B2D71B200C22970 /* BackTableVC.swift */,
@@ -236,8 +250,10 @@
 			files = (
 				B05CA5811B385AA4008536D9 /* LoginScreens.swift in Sources */,
 				B0F490531B2D563900C22970 /* ViewController.swift in Sources */,
+				B05CA5871B38BC95008536D9 /* DribbbleApi.swift in Sources */,
 				B0F490511B2D563900C22970 /* AppDelegate.swift in Sources */,
 				B0F490A91B2D71B200C22970 /* BackTableVC.swift in Sources */,
+				B05CA5891B38BCA4008536D9 /* Shots.swift in Sources */,
 				358ACDA41B2F985D00516538 /* AppState.swift in Sources */,
 				B05CA5851B387839008536D9 /* PageVC.swift in Sources */,
 				B0F490731B2D572900C22970 /* SWRevealViewController.m in Sources */,
