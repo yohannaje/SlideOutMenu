@@ -128,7 +128,7 @@ class CollectionItemViewController: UIViewController, UICollectionViewDataSource
         // Dispose of any resources that can be recreated.
     }
     
-    // CREO QUE ES POR ESTO
+   
     
     func categoryChangeNotificationReceived(notification: NSNotification) {
         varView = SharedAppState.selectedCategory

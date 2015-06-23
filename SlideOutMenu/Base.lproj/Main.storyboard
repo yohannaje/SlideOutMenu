@@ -292,7 +292,7 @@
                                 <color key="backgroundColor" red="0.94436553029090908" green="0.94436553029090908" blue="0.94436553029090908" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewLayout key="collectionViewLayout" id="PWJ-v7-Pap" customClass="UICollectionViewFlowLayout"/>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="center" reuseIdentifier="ShotCell" id="B0B-nI-3xp" customClass="ShotCell" customModule="SlideOutMenu" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShotCell" id="B0B-nI-3xp" customClass="ShotCell" customModule="SlideOutMenu" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
