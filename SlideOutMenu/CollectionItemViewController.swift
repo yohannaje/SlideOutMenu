@@ -83,8 +83,10 @@ class CollectionItemViewController: UIViewController, UICollectionViewDataSource
         shots = [Shots]()
         let api = DribbbleApi()
         
+        
+        
         api.loadShots({ self.didLoadShots($0) })
-
+        
         //View controllers inside navigation doesn't use the "preferredStatusBarStyle" instead the
         //app queries the navigation controller, so we need to edit it
         self.navigationController!.navigationBar.barStyle = UIBarStyle.Black;
@@ -92,6 +94,7 @@ class CollectionItemViewController: UIViewController, UICollectionViewDataSource
     
     func didLoadShots(shots: [Shots]){
         self.shots = shots
+        
         collectionView.reloadData()
         
     }
@@ -155,8 +158,13 @@ extension CollectionItemViewController: UICollectionViewDataSource {
         let item = shots[indexPath.item]
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ShotCell", forIndexPath: indexPath)as! ShotCell
         let shot = shots[indexPath.row]
+        
         asyncLoadShotImage(shot, imageview: cell.imageView)
+        
+        ////////////////////////
+        
         return cell
+        
     }
     
     func asyncLoadShotImage(shot: Shots, imageview: UIImageView){
@@ -172,6 +180,7 @@ extension CollectionItemViewController: UICollectionViewDataSource {
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 imageview.image = image
             })
+            
         })
     }
 }

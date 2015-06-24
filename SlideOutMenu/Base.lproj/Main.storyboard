@@ -287,7 +287,7 @@
                                     <constraint firstItem="qLz-B7-EID" firstAttribute="height" secondItem="Fvv-9s-y7O" secondAttribute="height" id="pkX-Ye-7jD"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="n7Y-vo-s2O">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" misplaced="YES" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="n7Y-vo-s2O">
                                 <rect key="frame" x="0.0" y="63" width="375" height="555"/>
                                 <color key="backgroundColor" red="0.94436553029090908" green="0.94436553029090908" blue="0.94436553029090908" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewLayout key="collectionViewLayout" id="PWJ-v7-Pap" customClass="UICollectionViewFlowLayout"/>
@@ -351,7 +351,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RDo-KR-ga2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1530.5" y="1856.5"/>
+            <point key="canvasLocation" x="1538.5" y="1848.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="epK-jn-Pwp">
@@ -442,5 +442,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="Qqy-0e-M8Q"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" red="0.94901960780000005" green="0.27058823529999998" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" red="0.99326966179999998" green="0.98777122100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

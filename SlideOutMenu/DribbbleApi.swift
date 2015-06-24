@@ -32,7 +32,9 @@ class DribbbleApi{
                 var shots = [Shots]()
                 for shot in shotsData{
                     let shot = Shots(data: shot as! NSDictionary)
+                    
                     shots.append(shot)
+                    
                 }
                 //Now that we have all the "shots" let's execute the completion block 
                 //And send the shots back so another part of the code can use them

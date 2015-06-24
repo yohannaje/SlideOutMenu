@@ -13,14 +13,15 @@ class Shots {
     var id: Int!
     var title: String!
     var imageUrl: String!
+    var tags: [String]
     
     var imageData: NSData?
     
     init (data: NSDictionary){
         self.id = data["id"] as! Int
-        self.title = getStringFromJSON(data, key: "title")
-        
+        self.tags = data["tags"] as! [String]
         let images = data["images"] as! NSDictionary
+        self.title = getStringFromJSON(data, key: "title")
         self.imageUrl = getStringFromJSON(images, key: "normal")
     }
     
