@@ -299,7 +299,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="125" height="126"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nuu-oX-s63">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nuu-oX-s63">
                                                     <rect key="frame" x="0.0" y="0.0" width="125" height="126"/>
                                                 </imageView>
                                             </subviews>

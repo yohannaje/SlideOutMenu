@@ -34,14 +34,11 @@ class ShotCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        //imageView.layer.borderColor = UIColor(white: 0.2, alpha: 1.0).CGColor
-        imageView.layer.borderWidth = 2
+        imageView.layer.borderColor = UIColor(white: 3.0, alpha: 1.0).CGColor
+        imageView.layer.borderWidth = 1
         
     }
-    
-//    func setItem(item: BasicItem) {
-//        imageView.image = item.image
-//    }
+
 }
 
 class CollectionItemViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
@@ -80,7 +77,7 @@ class CollectionItemViewController: UIViewController, UICollectionViewDataSource
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         
-        let cellWidth = self.view.frame.width/2
+        let cellWidth = self.view.frame.width/3
         layout.itemSize = CGSizeMake(cellWidth, cellHeight)
         
         shots = [Shots]()
@@ -156,10 +153,25 @@ extension CollectionItemViewController: UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let item = shots[indexPath.item]
-       
-            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ShotCell", forIndexPath: indexPath) as! ShotCell
-            
-            return cell
-        }
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ShotCell", forIndexPath: indexPath)as! ShotCell
+        let shot = shots[indexPath.row]
+        asyncLoadShotImage(shot, imageview: cell.imageView)
+        return cell
+    }
+    
+    func asyncLoadShotImage(shot: Shots, imageview: UIImageView){
+        let downloadQueue = dispatch_queue_create("com.SlideOutMenu.processdownload",nil)
         
+        dispatch_async(downloadQueue, { () -> Void in
+            var data = NSData(contentsOfURL: NSURL(string: shot.imageUrl )!)
+            var image: UIImage?
+            if data != nil{
+                shot.imageData = data
+                image = UIImage(data: data!)!
+            }
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                imageview.image = image
+            })
+        })
+    }
 }
