@@ -37,7 +37,10 @@ class DribbbleApi{
                 //Now that we have all the "shots" let's execute the completion block 
                 //And send the shots back so another part of the code can use them
                 //(calling completition would execute 'didLoadShots' on 'CollectionItemViewController'
-                completion(shots)
+                //We also need to do this on the main thread so nothing weird happens if the UI is updated
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    completion(shots)
+                })
             }
         }
         
