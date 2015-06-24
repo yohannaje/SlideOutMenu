@@ -34,7 +34,10 @@ class DribbbleApi{
                     let shot = Shots(data: shot as! NSDictionary)
                     shots.append(shot)
                 }
-                
+                //Now that we have all the "shots" let's execute the completion block 
+                //And send the shots back so another part of the code can use them
+                //(calling completition would execute 'didLoadShots' on 'CollectionItemViewController'
+                completion(shots)
             }
         }
         
