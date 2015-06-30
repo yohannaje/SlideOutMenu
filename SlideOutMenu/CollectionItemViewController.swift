@@ -51,11 +51,11 @@ class CollectionItemViewController: UIViewController, UICollectionViewDataSource
     
     @IBOutlet var layout: UICollectionViewFlowLayout!
     
-    var items = [BasicItem]()
-    var displayedItems = [BasicItem]()
     var varView: ItemType = .AllTypes
     
     var shots: [Shots]!
+    var filteredShots :[Shots]!
+    
     var cellHeight: CGFloat = 125
     
     
@@ -81,6 +81,7 @@ class CollectionItemViewController: UIViewController, UICollectionViewDataSource
         layout.itemSize = CGSizeMake(cellWidth, cellHeight)
         
         shots = [Shots]()
+        filteredShots = shots
         let api = DribbbleApi()
         
         
@@ -106,9 +107,7 @@ class CollectionItemViewController: UIViewController, UICollectionViewDataSource
     
     func didLoadShots(shots: [Shots]){
         self.shots = shots
-        
-        collectionView.reloadData()
-        
+        self.filterShotsByCurrentFilter()
     }
     
     @IBAction func FavoriteHandlr(sender: UIButton) {
@@ -140,20 +139,20 @@ class CollectionItemViewController: UIViewController, UICollectionViewDataSource
         // Dispose of any resources that can be recreated.
     }
     
-   
+    func filterShotsByCurrentFilter() {
+        if varView == .AllTypes {
+            filteredShots = shots
+        } else {
+            filteredShots = shots.filter{contains($0.tags, self.varView.title.lowercaseString)}
+        }
+        
+        collectionView.reloadData()
+        setTitle()
+    }
     
     func categoryChangeNotificationReceived(notification: NSNotification) {
         varView = SharedAppState.selectedCategory
-        if varView == .AllTypes {
-            displayedItems = items
-        } else {
-            displayedItems = items.filter {
-                [unowned self] item in
-                return item.category == self.varView
-            }
-        }
-        collectionView.reloadData()
-        setTitle()
+        self.filterShotsByCurrentFilter()
     }
     
     func setTitle() {
@@ -163,13 +162,12 @@ class CollectionItemViewController: UIViewController, UICollectionViewDataSource
 
 extension CollectionItemViewController: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return shots.count
+        return filteredShots.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let item = shots[indexPath.item]
+        let shot = filteredShots[indexPath.row]
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ShotCell", forIndexPath: indexPath)as! ShotCell
-        let shot = shots[indexPath.row]
         cell.imageView.image = nil;
         asyncLoadShotImage(shot, imageview: cell.imageView)
         

@@ -10,91 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SlideOutMenu/CollectionItemViewController.swift"
-            timestampString = "456786273.358967"
+            timestampString = "457393341.088137"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "collectionView(_:numberOfItemsInSection:)"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlideOutMenu/CollectionItemViewController.swift"
-            timestampString = "456784405.243183"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "CollectionItemViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SlideOutMenu.CollectionItemViewController.items.setter : Swift.Array&lt;SlideOutMenu.BasicItem&gt;"
-                  moduleName = "SlideOutMenu"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Bunny/Desktop/iOS/SlideOutMenu/SlideOutMenu/CollectionItemViewController.swift"
-                  timestampString = "456673532.349908"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SlideOutMenu.CollectionItemViewController.items.materializeForSet : Swift.Array&lt;SlideOutMenu.BasicItem&gt;"
-                  moduleName = "SlideOutMenu"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Bunny/Desktop/iOS/SlideOutMenu/SlideOutMenu/CollectionItemViewController.swift"
-                  timestampString = "456673532.350174"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SlideOutMenu.CollectionItemViewController.init (SlideOutMenu.CollectionItemViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; SlideOutMenu.CollectionItemViewController"
-                  moduleName = "SlideOutMenu"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Bunny/Desktop/iOS/SlideOutMenu/SlideOutMenu/CollectionItemViewController.swift"
-                  timestampString = "456673532.350427"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "357">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SlideOutMenu.CollectionItemViewController.init (SlideOutMenu.CollectionItemViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; SlideOutMenu.CollectionItemViewController"
-                  moduleName = "SlideOutMenu"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Bunny/Desktop/iOS/SlideOutMenu/SlideOutMenu/CollectionItemViewController.swift"
-                  timestampString = "456673532.350671"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "245">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -213,11 +135,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SlideOutMenu/CollectionItemViewController.swift"
-            timestampString = "456786273.358967"
+            timestampString = "457393341.088137"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
             landmarkName = "collectionView(_:numberOfItemsInSection:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -229,11 +151,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SlideOutMenu/CollectionItemViewController.swift"
-            timestampString = "456786273.358967"
+            timestampString = "457392632.958254"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "didLoadShots(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -241,16 +163,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlideOutMenu/ShotDetailViewController.swift"
+            timestampString = "457371064.419977"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SlideOutMenu/CollectionItemViewController.swift"
-            timestampString = "456786267.7783"
+            timestampString = "457392632.958254"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
