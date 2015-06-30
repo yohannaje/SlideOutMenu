@@ -92,6 +92,18 @@ class CollectionItemViewController: UIViewController, UICollectionViewDataSource
         self.navigationController!.navigationBar.barStyle = UIBarStyle.Black;
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "showShotDetail"
+        {
+            let shotIndexPath: NSIndexPath = self.collectionView.indexPathsForSelectedItems().first! as! NSIndexPath
+            let shot = self.shots[shotIndexPath.row]
+            let shotDetailViewController = segue.destinationViewController as! ShotDetailViewController
+            
+            shotDetailViewController.shot = shot
+        }
+    }
+    
     func didLoadShots(shots: [Shots]){
         self.shots = shots
         
@@ -158,11 +170,12 @@ extension CollectionItemViewController: UICollectionViewDataSource {
         let item = shots[indexPath.item]
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ShotCell", forIndexPath: indexPath)as! ShotCell
         let shot = shots[indexPath.row]
-        
+        cell.imageView.image = nil;
         asyncLoadShotImage(shot, imageview: cell.imageView)
         
         ////////////////////////
         
+    
         return cell
         
     }

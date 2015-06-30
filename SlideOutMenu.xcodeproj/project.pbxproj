@@ -13,6 +13,7 @@
 		B05CA5851B387839008536D9 /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05CA5841B387839008536D9 /* PageVC.swift */; };
 		B05CA5871B38BC95008536D9 /* DribbbleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05CA5861B38BC95008536D9 /* DribbbleApi.swift */; };
 		B05CA5891B38BCA4008536D9 /* Shots.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05CA5881B38BCA4008536D9 /* Shots.swift */; };
+		B05CA58E1B42EC95008536D9 /* ShotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05CA58D1B42EC95008536D9 /* ShotDetailViewController.swift */; };
 		B0F490511B2D563900C22970 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F490501B2D563900C22970 /* AppDelegate.swift */; };
 		B0F490531B2D563900C22970 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F490521B2D563900C22970 /* ViewController.swift */; };
 		B0F490561B2D563900C22970 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0F490541B2D563900C22970 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		B05CA5841B387839008536D9 /* PageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
 		B05CA5861B38BC95008536D9 /* DribbbleApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleApi.swift; sourceTree = "<group>"; };
 		B05CA5881B38BCA4008536D9 /* Shots.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shots.swift; sourceTree = "<group>"; };
+		B05CA58D1B42EC95008536D9 /* ShotDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotDetailViewController.swift; sourceTree = "<group>"; };
 		B0F4904B1B2D563900C22970 /* SlideOutMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideOutMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F4904F1B2D563900C22970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0F490501B2D563900C22970 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				358ACDA11B2F89F000516538 /* CollectionItemViewController.swift */,
 				B0F490521B2D563900C22970 /* ViewController.swift */,
 				B0F490541B2D563900C22970 /* Main.storyboard */,
+				B05CA58D1B42EC95008536D9 /* ShotDetailViewController.swift */,
 				B05CA5801B385AA4008536D9 /* LoginScreens.swift */,
 				B05CA5841B387839008536D9 /* PageVC.swift */,
 				B0F490571B2D563900C22970 /* Images.xcassets */,
@@ -249,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B05CA5811B385AA4008536D9 /* LoginScreens.swift in Sources */,
+				B05CA58E1B42EC95008536D9 /* ShotDetailViewController.swift in Sources */,
 				B0F490531B2D563900C22970 /* ViewController.swift in Sources */,
 				B05CA5871B38BC95008536D9 /* DribbbleApi.swift in Sources */,
 				B0F490511B2D563900C22970 /* AppDelegate.swift in Sources */,

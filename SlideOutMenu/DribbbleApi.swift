@@ -14,7 +14,7 @@ class DribbbleApi{
 
     func loadShots(completion:(([Shots]) -> Void!)){
         
-        var urlString = "https://api.dribbble.com/v1/shots?access_token=" + accessToken
+        var urlString = "https://api.dribbble.com/v1/shots?per_page=36&page=2&access_token=" + accessToken
         
         let session = NSURLSession.sharedSession()
         let shotsUrl = NSURL(string: urlString)

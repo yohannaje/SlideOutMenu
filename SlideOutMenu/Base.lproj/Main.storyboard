@@ -308,7 +308,7 @@
                                         <size key="customSize" width="125" height="126"/>
                                         <connections>
                                             <outlet property="imageView" destination="Nuu-oX-s63" id="xwe-Xa-KTS"/>
-                                            <segue destination="vyg-61-uVN" kind="show" id="ds2-x0-5vV"/>
+                                            <segue destination="vyg-61-uVN" kind="show" identifier="showShotDetail" id="ds2-x0-5vV"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -353,10 +353,10 @@
             </objects>
             <point key="canvasLocation" x="1538.5" y="1848.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Shot Detail View Controller-->
         <scene sceneID="epK-jn-Pwp">
             <objects>
-                <viewController id="vyg-61-uVN" sceneMemberID="viewController">
+                <viewController id="vyg-61-uVN" customClass="ShotDetailViewController" customModule="SlideOutMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OkU-SN-Qoh"/>
                         <viewControllerLayoutGuide type="bottom" id="HtT-yM-dQ3"/>
@@ -385,6 +385,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="shotImage" destination="XWV-YE-XGV" id="rH7-s7-b4a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dN7-ew-Jp0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
