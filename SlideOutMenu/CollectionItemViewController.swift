@@ -158,6 +158,12 @@ class CollectionItemViewController: UIViewController, UICollectionViewDataSource
     func setTitle() {
         Label.text = varView.title
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+    }
+
 }
 
 extension CollectionItemViewController: UICollectionViewDataSource {
